@@ -1,0 +1,32 @@
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css");
+
+ul.somc-subpages {
+	list-style-type: none !important;
+}
+
+ul.somc-subpages > li.somc-current-page {
+	font-weight: bold;
+	color: #000;
+}
+
+ul.somc-subpages > li.somc-sub-page {
+	font-weight: normal;
+    margin-left: 5px;
+}
+
+ul.somc-subpages > li.somc-sub-page a {
+    text-decoration: none !important;
+    border-bottom: none !important;
+    color: #3287bd;
+}
+
+ul.somc-subpages > li.somc-sub-page:hover {
+	font-weight: normal;
+	padding-left: 5px;
+	-moz-transition: padding-left .3s ease-in;
+    -o-transition: padding-left  .3s ease-in;
+    -webkit-transition: padding-left  .3s ease-in;
+    transition: padding-left  .3s ease-in;
+	color: #3287bd;
+    text-decoration: underline;
+}
