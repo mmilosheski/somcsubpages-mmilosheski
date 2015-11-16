@@ -70,7 +70,7 @@ class SomcSubPages {
 		//Check if is page, we don't want this to go fire up, for posts/custom post types
 		if( is_page() ) {
 			$somc_subpages_content = '<ul class="somc-subpages">';
-			$somc_subpages_content .= '<li class="somc-current-page">'.$post->post_title.'<a id="hide" href="javascript:void();"><i class="fa fa-minus"></i></a></li>';
+			$somc_subpages_content .= '<li class="somc-current-page">'.$post->post_title.'   <a id="hide" href="javascript:void();"><i class="fa fa-minus"></i></a></li>';
 			if (get_option('scsp-asc-desc') == 0 ) {
 				$SomcSubPages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
 			} else {
@@ -83,7 +83,7 @@ class SomcSubPages {
 				}
 			}
 			$somc_subpages_content .= '</ul>';
-
+			
 			return $somc_subpages_content;
 		}
 		
@@ -101,7 +101,10 @@ class SomcSubPages {
 
 	// this will enque the plugins style for front end list
 	public function enqueue_assets() {
-		wp_enqueue_style( "wpscsp-style",  plugins_url( 'css/somcsubpages.css', __FILE__ ));
+		wp_enqueue_style( "wpscsp-style", plugins_url( 'css/somcsubpages.css', __FILE__ ));
+		wp_enqueue_script('jquery');
+		wp_enqueue_script( 'jquery-form' );
+		wp_enqueue_script( "wpscp-front-js", plugins_url( 'js/somc-subpages-front.js', __FILE__ ), array('jquery','jquery-form'));
 	}
 
 	//This callback adds our button to the toolbar
