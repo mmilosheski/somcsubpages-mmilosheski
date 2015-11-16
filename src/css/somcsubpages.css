@@ -33,3 +33,7 @@ ul.somc-subpages > li.somc-sub-page:hover {
 .hidden {
     display: none;
 }
+a#hide {
+    border-bottom: none !important;
+    text-decoration: none !important;
+}
