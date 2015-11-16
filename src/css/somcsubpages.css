@@ -30,3 +30,6 @@ ul.somc-subpages > li.somc-sub-page:hover {
 	color: #3287bd;
     text-decoration: underline;
 }
+.hidden {
+    display: none;
+}

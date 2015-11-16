@@ -70,7 +70,7 @@ class SomcSubPages {
 		//Check if is page, we don't want this to go fire up, for posts/custom post types
 		if( is_page() ) {
 			$somc_subpages_content = '<ul class="somc-subpages">';
-			$somc_subpages_content .= '<li class="somc-current-page">'.$post->post_title.'</li>';
+			$somc_subpages_content .= '<li class="somc-current-page">'.$post->post_title.'<a id="hide" href="javascript:void();"><i class="fa fa-minus"></i></a></li>';
 			if (get_option('scsp-asc-desc') == 0 ) {
 				$SomcSubPages = get_pages( array( 'child_of' => $post->ID, 'sort_column' => 'post_date', 'sort_order' => 'asc' ) );
 			} else {

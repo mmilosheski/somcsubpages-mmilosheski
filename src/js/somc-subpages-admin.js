@@ -10,4 +10,8 @@ jQuery(document).ready(function() {
       }); 
       return false; 
    });
+   jQuery("a#hide").click(function() {
+   jQuery("li.somc-sub-page").toggleClass("hidden");
+   jQuery("a#hide i.fa").toggleClass("fa-minus fa-plus");
+});
 });
